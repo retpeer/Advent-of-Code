@@ -1,4 +1,3 @@
-from collections import Counter
 def ZT():
     infoFile = open("Zahlen.txt","r")
     numbers = []
