@@ -1,0 +1,24 @@
+def ZT():
+    infoFile = open("Zahlen.txt","r")
+    numbers = []
+    for number in infoFile:
+        numbers.append(int(number))
+    return numbers
+    
+numbers = ZT()
+
+n = -1
+
+while n < len(numbers)-3:
+    n += 1
+    i = 0
+    while i < len(numbers)-n-1:
+        i += 1
+        m = 0
+        while m < len(numbers)-1-n-i:
+            m += 1
+            if numbers[n] + numbers[n+i] + numbers[m+n+i] == 2020:
+                print(numbers[n]) 
+                print(numbers[n+i]) 
+                print(numbers[n+m+i]) 
+                print(numbers[n] * numbers[n+i] * numbers[m+n+i])
