@@ -1,0 +1,10 @@
+num_lines = sum(1 for pines in open('day3zeichen.txt'))
+b = []
+
+for x in range(1, num_lines):
+    f = open("day3zeichen.txt", "r")
+    a = str(f.readlines()[x].split("\n")[0])
+    a = a + (num_lines * a)
+    b.append(a[(x*3)])
+
+print(b.count('#'))
